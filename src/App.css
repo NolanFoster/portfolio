@@ -6,3 +6,26 @@
     --font-color: hsl(0, 0%, 100%);
     --font-color-hover: hsl(229.4, 66.2%, 30.2%);
 }
+
+.particles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    min-height: 96vh;
+  }
+
+.particles-canvas {
+    background-color: linear-gradient(187deg, rgba(8,20,72,1) 27%, rgba(74,71,138,1) 84%, rgba(218,138,139,1) 100%);
+}
+
+.tsparticles-canvas-el {
+    position: absolute;
+    min-height: 96vh;
+}
+
+#tsparticles {
+    height: 100vh;
+}
