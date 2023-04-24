@@ -4,6 +4,7 @@ import Navigation from './screens/navigationBar/navigationBar';
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import Header from './screens/header/Header';
 
 function App() {
   const particlesInit = useCallback(async engine => {
@@ -20,7 +21,8 @@ const particlesLoaded = useCallback(async container => {
 
   return (
     <div className="App">
-      <Navigation></Navigation>
+      <Navigation />
+      <Header />
       <Particles 
             id="tsparticles"
             className='particles'
@@ -63,7 +65,7 @@ const particlesLoaded = useCallback(async container => {
                           default: "bounce",
                       },
                       random: false,
-                      speed: 0.025,
+                      speed: 0.03,
                       straight: false,
                   },
                   number: {

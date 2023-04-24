@@ -4,15 +4,15 @@ export const navigationLinks = [
     ref: '#home'
     },
     {
-    name: 'ABOUT ME',
-    ref: '#about-me'
+    name: 'RESUME',
+    ref: 'https://resume.nolanfoster.workers.dev/NolanFosterResume2023Web.pdf'
     },
-    {
-    name: 'TECHNOLOGIES',
-    ref: '#technologies'
-    },
-    {
-    name: 'PORTFOLIO',
-    ref: '#portfolio'
-    },
+//    {
+//    name: 'TECHNOLOGIES',
+//    ref: '#technologies'
+//    },
+//    {
+//    name: 'PORTFOLIO',
+//    ref: '#portfolio'
+//    },
 ]
