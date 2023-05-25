@@ -15,7 +15,8 @@ const getHeaderData = async () => {
 const headerData = async() => await getHeaderData();
 
 function Header() {
-    return (
+    headerData();
+     return (
       <div className='main-info'>
         <h1>What am I?</h1>
         <Typewriter
