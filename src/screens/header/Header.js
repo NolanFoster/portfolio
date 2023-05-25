@@ -7,7 +7,7 @@ import Typewriter from "typewriter-effect";
 const getHeaderData = async () => {
   console.log("index.html 10 | Processing...");
   const request = await fetch("hhttps://nolanfoster.me/whoami");
-  const data = await request.json();
+  const data = await request.json().stringify();
   return data;
 };
 
