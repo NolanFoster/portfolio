@@ -5,10 +5,11 @@ import Typewriter from "typewriter-effect";
 
 
 const getHeaderData = async () => {
-  console.log("index.html 10 | Processing...");
-  const request = await fetch("hhttps://nolanfoster.me/whoami");
-  const data = await request.json().stringify();
-  return data;
+  const request = await fetch("https://nolanfoster.me/whoami");
+  const data = await request.json();
+  console.log(data);
+  
+  return data.strinify(); // return success object
 };
 
 const headerData = async() => await getHeaderData();
@@ -20,7 +21,8 @@ function Header() {
         <Typewriter
   
           options={{
-              strings: headerData.split(","),
+              strings: ['A Software Engineer', 'Also known as an', "Back-end developer", "Embedded developer", 
+                        "Mobile developer", "Or!", "<strong>a coder</strong>"],
               autoStart: true,
               loop: true,
           }}
