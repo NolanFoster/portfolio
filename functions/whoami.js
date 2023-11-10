@@ -3,6 +3,6 @@ export async function onRequest(context) {
     if (value === null) {
       return new Response("Value not found", { status: 404 });
     }
-    return new Response(value);
+    return new Response(JSON.parse(JSON.stringify(value)));
   }
   

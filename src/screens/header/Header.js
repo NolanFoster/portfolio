@@ -14,23 +14,21 @@ function Header() {
       }, [whoami]) 
 	
 const getHeaderData = async () => {
-        const request = null;
 	try
 	{
-	   request = await fetch("https://nolanfoster.me/whoami", 
-		   { headers: {
-    'Access-Control-Allow-Origin': '*'
-		   }});
-        } catch (error) {
-        // TypeError: Failed to fetch
-         console.log('There was an error', error);
-	const data =  ['A Software Engineer', 'Also known as an', "Back-end developer", "Embedded developer",
+	   const request = await fetch("https://nolanfoster.me/whoami");
+     const data = await request.text();
+     setWhoAmI(data);
+  } 
+  catch (error) 
+  {
+    // TypeError: Failed to fetch
+    console.log('There was an error', error);
+	  const data =  ['A Software Engineer', 'Also known as an', "Back-end developer", "Embedded developer",
                         "Mobile developer", "Or!", "<strong>a coder</strong>"]
-       setWhoAmI(data);
-		return
-    }
-	const data = await request.text();
-       setWhoAmI(data);
+    setWhoAmI(data);
+  }
+  
 };
      return (
       <div className='main-info'>
