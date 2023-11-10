@@ -17,7 +17,7 @@ const getHeaderData = async () => {
 	try
 	{
 	   const request = await fetch("https://nolanfoster.me/whoami");
-     const data = await request.text();
+     const data = await request.json();
      setWhoAmI(data);
   } 
   catch (error) 
@@ -26,7 +26,7 @@ const getHeaderData = async () => {
     console.log('There was an error', error);
 	  const data =  ['A Software Engineer', 'Also known as an', "Back-end developer", "Embedded developer",
                         "Mobile developer", "Or!", "<strong>a coder</strong>"]
-    setWhoAmI(data);
+    setWhoAmI(JSON.stringify(data));
   }
   
 };
