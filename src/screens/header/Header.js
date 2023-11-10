@@ -10,7 +10,7 @@ function Header() {
         getHeaderData();
      }, [])
      useEffect(() => {
-        console.log(whoami)
+        //console.log(whoami)
       }, [whoami]) 
 	
 const getHeaderData = async () => {
@@ -36,8 +36,7 @@ const getHeaderData = async () => {
         <Typewriter
   
           options={{
-              strings: ['A Software Engineer', 'Also known as an', "Back-end developer", "Embedded developer", 
-                        "Mobile developer", "Or!", "<strong>a coder</strong>"],
+              strings: whoami,
               autoStart: true,
               loop: true,
           }}
@@ -46,22 +45,5 @@ const getHeaderData = async () => {
       </div>
     )
  }
-
-  //return (
-  //  <div className='main-info'>
-  //    <h1>What am I?</h1>
-  //    <Typewriter
-
-  //      options={{
-  //          strings: ['A Software Engineer', 'Also known as an', "Back-end developer", "Embedded developer", 
-  //          "Mobile developer", "Or!", "<strong>a coder</strong>"],
-  //          autoStart: true,
-  //          loop: true,
-  //      }}
-        
-  //      />
-  //  </div>
-//  )
-//}
 
 export default Header
